@@ -3,7 +3,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		/*	esto no sirve para nada pero es para que vea que numero de cara 
+		/*	esto no sirve para nada pero es para que vea, que numero de cara 
 		 *  epresenta cada cara: 	  0   1   2   3   4   5           
 					                 'w','b','r','o','g','y'  */
 				
@@ -18,7 +18,7 @@ public class Main {
 		
 		
 		
-//		aquí se declaran todas las instancias de la clase "Cara"
+//		aquÃ­ se declaran todas las instancias de la clase "Cara"
 //		osea las 6 caras basicamente
 		Cara wFace = new Cara((byte)0);
 		Cara bFace = new Cara((byte)1);
