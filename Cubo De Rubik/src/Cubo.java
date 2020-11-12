@@ -29,15 +29,15 @@ public class Cubo {
 		switch (orientacion){
 //		si la cara es blanca se ejecuta este codigo
 		case 0:
-//			se determina la cara extra
-			caraExtra.setAllColors(c3);
+
+			caraExtra.setAllColors(c3);     //se determina la cara extra
 			for(byte c=0; c<3; c++) {
 //				movimiento 1
 				this.c3.setColorCuadrados(c, 2, this.c4.getColorCuadrados((byte)0, c));
 			}
 			
+//			movimiento 2
 			for(byte c=0; c<3; c++) {
-//				movimiento 2
 				this.c4.setColorCuadrados(0, c, this.c2.getColorCuadrados(revez, (byte)0));
 			}
 			

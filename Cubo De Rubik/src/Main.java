@@ -31,7 +31,7 @@ public class Main {
 
 		Cubo cubo = new Cubo(wFace, bFace, rFace, oFace, gFace, yFace);
 
-		cubo.horario((byte)0);
+//		cubo.horario((byte)0);
 //		cubo.horario((byte)1);
 //		cubo.horario((byte)2);
 //		cubo.horario((byte)3);
