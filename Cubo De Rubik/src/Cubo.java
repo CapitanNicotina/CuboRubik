@@ -7,8 +7,9 @@ public class Cubo {
 	private Cara c3;
 	private Cara c4;
 	private Cara c5;
-
-
+	
+	
+	
 
 	public Cubo(Cara c0, Cara c1, Cara c2, Cara c3, Cara c4, Cara c5) {
 		super();
@@ -24,32 +25,35 @@ public class Cubo {
 //		Se crea una cara con la información de la cara del primer movimiento
 		Cara caraExtra = new Cara();
 		char cuadradoExtra = ' ';
-		byte revez = 2;
+		byte revez;
 		
 		switch (orientacion){
 //		si la cara es blanca se ejecuta este codigo
 		case 0:
 
 			caraExtra.setAllColors(c3);     //se determina la cara extra
+//			movimiento 1
 			for(byte c=0; c<3; c++) {
-//				movimiento 1
 				this.c3.setColorCuadrados(c, 2, this.c4.getColorCuadrados((byte)0, c));
 			}
 			
 //			movimiento 2
+			revez = 2;
 			for(byte c=0; c<3; c++) {
 				this.c4.setColorCuadrados(0, c, this.c2.getColorCuadrados(revez, (byte)0));
+				revez--;
 			}
 			
+//			movimiento 3
 			for(byte c=0; c<3; c++) {
-//				movimiento 3
 				this.c2.setColorCuadrados(c, 0, this.c1.getColorCuadrados((byte)2, c));
 			}
 			
+//			movimiento 4
+			revez = 2;
 			for(byte c=0; c<3; c++) {
-//				movimiento 4
 				this.c1.setColorCuadrados(2, c, caraExtra.getColorCuadrados(revez, (byte)2));
-				revez-=1;
+				revez--;
 			}
 			
 //			movimiento 5 (esquinas)
@@ -105,20 +109,30 @@ public class Cubo {
 		
 //		si la cara es rojo se ejecuta este codigo
 		case 2:
-//			se determina la cara extra
-			caraExtra.setAllColors(c1);
+			caraExtra.setAllColors(c1);		//se determina la cara extra
+
+//			movimiento 1
 			for(byte c=0; c<3; c++) {
-//				movimiento 1
 				this.c1.setColorCuadrados(c, 2, this.c0.getColorCuadrados(c, (byte)2));
+			}
 
-//				movimiento 2
+//			movimiento 2
+			for(byte c=0; c<3; c++) {
 				this.c0.setColorCuadrados(c, 2, this.c4.getColorCuadrados(c, (byte)2));
+			}
 
-//				movimiento 3
-				this.c4.setColorCuadrados(c, 2, this.c5.getColorCuadrados(c, (byte)2));
+//			movimiento 3
+			revez = 2;
+			for(byte c=0; c<3; c++) {
+				this.c4.setColorCuadrados(c, 2, this.c5.getColorCuadrados(revez, (byte)0));
+				revez--;
+			}
 
-//				movimiento 4
-				this.c5.setColorCuadrados(c, 2,caraExtra.getColorCuadrados(c, (byte)2));
+//			movimiento 4
+			revez = 2;
+			for(byte c=0; c<3; c++) {
+				this.c5.setColorCuadrados(c, 0,caraExtra.getColorCuadrados(revez, (byte)2));
+				revez--;
 			}
 
 //			movimiento 5 (esquinas)
@@ -140,18 +154,29 @@ public class Cubo {
 		case 3:
 //			se determina la cara extra
 			caraExtra.setAllColors(c4);
+
+//			movimiento 1
 			for(byte c=0; c<3; c++) {
-//				movimiento 1
 				this.c4.setColorCuadrados(c, 0, this.c0.getColorCuadrados(c, (byte)0));
+			}
 
-//				movimiento 2
+//			movimiento 2
+			for(byte c=0; c<3; c++) {
 				this.c0.setColorCuadrados(c, 0, this.c1.getColorCuadrados(c, (byte)0));
+			}
 
-//				movimiento 3
-				this.c1.setColorCuadrados(c, 0, this.c5.getColorCuadrados(c, (byte)0));
+//			movimiento 3
+			revez = 2;
+			for(byte c=0; c<3; c++) {
+				this.c1.setColorCuadrados(c, 0, this.c5.getColorCuadrados(revez, (byte)2));
+				revez--;
+			}
 
-//				movimiento 4
-				this.c5.setColorCuadrados(c, 0, caraExtra.getColorCuadrados(c, (byte)0));
+//			movimiento 4
+			revez = 2;
+			for(byte c=0; c<3; c++) {
+				this.c5.setColorCuadrados(c, 2, caraExtra.getColorCuadrados(revez, (byte)0));
+				revez--;
 			}
 
 //			movimiento 5 (esquinas)
@@ -173,17 +198,24 @@ public class Cubo {
 		case 4:
 //			se determina la cara extra
 			caraExtra.setAllColors(c0);
-			for(byte c=0; c<3; c++) {
+			
 //				movimiento 1
+			for(byte c=0; c<3; c++) {	
 				this.c0.setColorCuadrados(2, c, this.c3.getColorCuadrados((byte)2, c));
+			}
 
 //				movimiento 2
+			for(byte c=0; c<3; c++) {	
 				this.c3.setColorCuadrados(2, c, this.c5.getColorCuadrados((byte)2, c));
-
+			}
+			
 //				movimiento 3
+			for(byte c=0; c<3; c++) {
 				this.c5.setColorCuadrados(2, c, this.c2.getColorCuadrados((byte)2, c));
-
+			}
+			
 //				movimiento 4
+			for(byte c=0; c<3; c++) {
 				this.c2.setColorCuadrados(2, c, caraExtra.getColorCuadrados((byte)2, c));
 			}
 
@@ -206,17 +238,27 @@ public class Cubo {
 		case 5:
 //			se determina la cara extra
 			caraExtra.setAllColors(c3);
+//			movimiento 1
+			revez = 2;
 			for(byte c=0; c<3; c++) {
-//				movimiento 1
-				this.c3.setColorCuadrados(c, 0, this.c1.getColorCuadrados((byte)0, c));
+				this.c3.setColorCuadrados(c, 0, this.c1.getColorCuadrados((byte)0, revez));
+				revez--;
+			}
 
-//				movimiento 2
+//			movimiento 2
+			for(byte c=0; c<3; c++) {
 				this.c1.setColorCuadrados(0, c, this.c2.getColorCuadrados(c, (byte)2));
-
-//				movimiento 3
-				this.c2.setColorCuadrados(c, 2, this.c4.getColorCuadrados((byte)2, c));
-
-//				movimiento 4
+			}
+			
+//			movimiento 3
+			revez = 2;
+			for(byte c=0; c<3; c++) {
+				this.c2.setColorCuadrados(c, 2, this.c4.getColorCuadrados((byte)2, revez));
+				revez--;
+			}
+			
+//			movimiento 4
+			for(byte c=0; c<3; c++) {
 				this.c4.setColorCuadrados(2, c, caraExtra.getColorCuadrados(c, (byte)0));
 			}
 

@@ -148,7 +148,6 @@ public class Cara {
 		this.colorCuadrados[f][c] = colorCuadrado;
 	}
 
-	
 	public void absorverColores(char[][] colores) {
 		for(byte fila=0; fila<3; fila++) {
 			for(byte columna=0; columna<3; columna++) {
