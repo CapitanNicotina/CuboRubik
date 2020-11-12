@@ -24,6 +24,7 @@ public class Cubo {
 //		Se crea una cara con la información de la cara del primer movimiento
 		Cara caraExtra = new Cara();
 		char cuadradoExtra = ' ';
+		byte revez = 2;
 		
 		switch (orientacion){
 //		si la cara es blanca se ejecuta este codigo
@@ -31,21 +32,27 @@ public class Cubo {
 //			se determina la cara extra
 			caraExtra.setAllColors(c3);
 			for(byte c=0; c<3; c++) {
-
 //				movimiento 1
 				this.c3.setColorCuadrados(c, 2, this.c4.getColorCuadrados((byte)0, c));
-
-//	  			movimiento 2
-				this.c4.setColorCuadrados(0, c, this.c2.getColorCuadrados(c, (byte)0));
-
+			}
+			
+			for(byte c=0; c<3; c++) {
+//				movimiento 2
+				this.c4.setColorCuadrados(0, c, this.c2.getColorCuadrados(revez, (byte)0));
+			}
+			
+			for(byte c=0; c<3; c++) {
 //				movimiento 3
 				this.c2.setColorCuadrados(c, 0, this.c1.getColorCuadrados((byte)2, c));
-
-//				movimiento 4
-				this.c1.setColorCuadrados(2, c, caraExtra.getColorCuadrados(c, (byte)2));
 			}
-
-			//			movimiento 5 (esquinas)
+			
+			for(byte c=0; c<3; c++) {
+//				movimiento 4
+				this.c1.setColorCuadrados(2, c, caraExtra.getColorCuadrados(revez, (byte)2));
+				revez-=1;
+			}
+			
+//			movimiento 5 (esquinas)
 			cuadradoExtra = c0.getColorCuadrados((byte)0, (byte)0);
 			this.c0.setColorCuadrados(0, 0, this.c0.getColorCuadrados((byte)2, (byte)0));
 			this.c0.setColorCuadrados(2, 0, this.c0.getColorCuadrados((byte)2, (byte)2));
@@ -67,13 +74,16 @@ public class Cubo {
 			for(byte c=0; c<3; c++) {
 //				movimiento 1
 				this.c5.setColorCuadrados(0, c, this.c3.getColorCuadrados((byte)0, c));
-
+			}
+			for(byte c=0; c<3; c++) {
 //				movimiento 2
 				this.c3.setColorCuadrados(0, c, this.c0.getColorCuadrados((byte)0, c));
-
+			}
+			for(byte c=0; c<3; c++) {
 //				movimiento 3
 				this.c0.setColorCuadrados(0, c, this.c2.getColorCuadrados((byte)0, c));
-
+			}
+			for(byte c=0; c<3; c++) {
 //				movimiento 4
 				this.c2.setColorCuadrados(0, c,caraExtra.getColorCuadrados((byte)0, c));
 			}
