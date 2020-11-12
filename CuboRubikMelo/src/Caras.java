@@ -22,7 +22,7 @@ public class Caras {
 			}
 		}
 	}
-	public void desorganizada() {
+	public void desorganada() {
 		
 		
 	}
