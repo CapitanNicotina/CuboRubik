@@ -26,18 +26,19 @@ public class Main {
 
 		Cubo cubo = new Cubo(wFace, bFace, rFace, oFace, gFace, yFace);
 
-		cubo.horario((byte)3);
+		
 		cubo.horario((byte)0);
 		cubo.horario((byte)1);
 		cubo.horario((byte)2);
-		cubo.horario((byte)5);
 		cubo.horario((byte)3);
-		cubo.horario((byte)5);
 		cubo.horario((byte)4);
 		cubo.horario((byte)5);
-		cubo.horario((byte)0);
-		cubo.horario((byte)5);
-		cubo.horario((byte)1);
+		cubo.antiHorario((byte)0);
+		cubo.antiHorario((byte)1);
+		cubo.antiHorario((byte)2);
+		cubo.antiHorario((byte)3);
+		cubo.antiHorario((byte)4);
+		cubo.antiHorario((byte)5);
 		
 		
 		
