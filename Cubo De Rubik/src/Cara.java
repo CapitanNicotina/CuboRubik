@@ -46,12 +46,17 @@ public class Cara {
 			}
 		}
 	}
-
+	
+	
+	/**
+	 * Se crea una cara sin parametros
+	 */
 	public Cara() {
 	}
 
+	
 	/**
-	 * Se ingresan los arreglos de todas las caras y las imprime en la consola
+	 * Se ingresan los arreglos de todas las caras que se desean imprimir y las imprime en la consola
 	 * @param whiteFace
 	 * @param blueFace
 	 * @param redFace
@@ -123,6 +128,7 @@ public class Cara {
 		}
 	}
 
+	
 	/**
 	 * Imrime La cara que sea seleccionada
 	 * @param caraAImprimir
@@ -140,16 +146,34 @@ public class Cara {
 
 	}
 
+	
+	/**
+	 * devuelve el color de un cuadrado de una cara en una determinada fila y columna
+	 * @param fila
+	 * @param columna
+	 * @return
+	 */
 	public char getColorCuadrados(byte fila, byte columna) {
 		return colorCuadrados[fila][columna];
 	}
 
+	
+	/**
+	 * determina el color de un cuadrado de una fila y columna
+	 * @param fila
+	 * @param columna
+	 * @param colorCuadrado
+	 */
 	public void setColorCuadrados(int f, int c, char colorCuadrado) {
 		this.colorCuadrados[f][c] = colorCuadrado;
 	}
 
 	
-	public void absorverColores(char[][] colores) {
+	/**
+	 * Coge todos los colores de un arreglo 3x3 y los asigna a los colores de la cara
+	 * @param arreglo 3x3 del que se sacan los colores
+	 */
+	public void setAllColors(char[][] colores) {
 		for(byte fila=0; fila<3; fila++) {
 			for(byte columna=0; columna<3; columna++) {
 				colores [fila][columna] = this.getColorCuadrados(fila, columna);
@@ -157,8 +181,9 @@ public class Cara {
 		}
 	}
 
+	
 	/**
-	 * coje todos los colores de una cara y se los asigna a otra
+	 * Coge todos los colores de una cara y se los asigna a otra
 	 * @param cara de la que se sacan los colores
 	 */
 	public void setAllColors(Cara cara) {
@@ -169,5 +194,17 @@ public class Cara {
 		}
 	}
 
+	
+	/**
+	 * Le asigna un color seleccionado a todos los espacios de una cara
+	 * @param color al cual va a pasar la cara
+	 */
+	public void setAllColors(char color) {
+		for(byte f=0; f<3; f++) {
+			for(byte c=0; c<3; c++) {
+				this.colorCuadrados[f][c] = color;
+			}
+		}
+	}
 
 }

@@ -17,33 +17,36 @@ public class Main {
 
 		//		aquí se declaran todas las instancias de la clase "Cara"
 		//		osea las 6 caras basicamente
-		Cara wFace = new Cara((byte)0);
-		Cara bFace = new Cara((byte)1);
-		Cara rFace = new Cara((byte)2);
-		Cara oFace = new Cara((byte)3);
-		Cara gFace = new Cara((byte)4);
-		Cara yFace = new Cara((byte)5);
+		
+				Cara wFace = new Cara((byte)0);
+				Cara bFace = new Cara((byte)1);
+				Cara rFace = new Cara((byte)2);
+				Cara oFace = new Cara((byte)3);
+				Cara gFace = new Cara((byte)4);
+				Cara yFace = new Cara((byte)5);
+				Cubo cubo = new Cubo(wFace, bFace, rFace, oFace, gFace, yFace);
 
-		Cubo cubo = new Cubo(wFace, bFace, rFace, oFace, gFace, yFace);
-
+				/*cubo.horario((byte)0);
+				cubo.horario((byte)1);
+				cubo.horario((byte)2);
+				cubo.horario((byte)3);
+				cubo.horario((byte)4);
+				cubo.horario((byte)5);
+				cubo.antiHorario((byte)0);
+				cubo.antiHorario((byte)1);
+				cubo.antiHorario((byte)2);
+				cubo.antiHorario((byte)3);
+				cubo.antiHorario((byte)4);
+				cubo.antiHorario((byte)5);*/
+				
+				System.out.println(cubo.desarmar(20, (byte)0));
+				Cara.imprimirCarasEnConsola(wFace, bFace, rFace, oFace, gFace, yFace);
+				System.out.println();
+				
+				cubo.armar();
+				Cara.imprimirCarasEnConsola(wFace, bFace, rFace, oFace, gFace, yFace);
+				System.out.println();
 		
-		cubo.horario((byte)0);
-		cubo.horario((byte)1);
-		cubo.horario((byte)2);
-		cubo.horario((byte)3);
-		cubo.horario((byte)4);
-		cubo.horario((byte)5);
-		cubo.antiHorario((byte)0);
-		cubo.antiHorario((byte)1);
-		cubo.antiHorario((byte)2);
-		cubo.antiHorario((byte)3);
-		cubo.antiHorario((byte)4);
-		cubo.antiHorario((byte)5);
 		
-		
-		
-		//		se imprimen todas las caras
-		Cara.imprimirCarasEnConsola(wFace, bFace, rFace, oFace, gFace, yFace);
-		System.out.println();
 	}
 }
