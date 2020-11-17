@@ -1,8 +1,6 @@
 
 public class Cuadrado {
-	private char color;
-	private byte posicion;
-	private char cara;
+
 	
 	
 	/**
@@ -12,12 +10,6 @@ public class Cuadrado {
 	 * @param cara        es la cara en la cual se encuentra el cuadradito (1-9 desde la
 	 * esquina de la parte superior izquierda hasta la esquina inferior derecha)
 	 */
-	public Cuadrado (char color, byte posicion, char cara) {
-		this.color = color;
-		this.posicion = posicion;
-		this.cara = cara;
-	}
-	
 	
 	
 	

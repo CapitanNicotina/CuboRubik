@@ -56,7 +56,8 @@ public class Cara {
 
 	
 	/**
-	 * Se ingresan los arreglos de todas las caras que se desean imprimir y las imprime en la consola
+	 * Se ingresan los arreglos de todas las caras que se desean imprimir y las imprime 
+	 * en la consola
 	 * @param whiteFace
 	 * @param blueFace
 	 * @param redFace
@@ -206,5 +207,10 @@ public class Cara {
 			}
 		}
 	}
-
+	
+	
+	
+		
+	
+	
 }

@@ -901,6 +901,8 @@ public class Cubo {
 		
 		return instruccionesArmar;
 	}
+
+	
 	
 	
 	

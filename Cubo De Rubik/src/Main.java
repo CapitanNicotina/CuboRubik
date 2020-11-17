@@ -39,6 +39,9 @@ public class Main {
 				cubo.antiHorario((byte)4);
 				cubo.antiHorario((byte)5);*/
 				
+				
+				VentanaCubo ventanaCubo = new VentanaCubo();
+				
 				System.out.println(cubo.desarmar(20, (byte)0));
 				Cara.imprimirCarasEnConsola(wFace, bFace, rFace, oFace, gFace, yFace);
 				System.out.println();
