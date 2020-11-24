@@ -17,14 +17,9 @@ public class Main {
 
 		//		aquí se declaran todas las instancias de la clase "Cara"
 		//		osea las 6 caras basicamente
+
 		
-				Cara wFace = new Cara((byte)0);
-				Cara bFace = new Cara((byte)1);
-				Cara rFace = new Cara((byte)2);
-				Cara oFace = new Cara((byte)3);
-				Cara gFace = new Cara((byte)4);
-				Cara yFace = new Cara((byte)5);
-				Cubo cubo = new Cubo(wFace, bFace, rFace, oFace, gFace, yFace);
+				
 
 				/*cubo.horario((byte)0);
 				cubo.horario((byte)1);
@@ -40,15 +35,15 @@ public class Main {
 				cubo.antiHorario((byte)5);*/
 				
 				
-				VentanaCubo ventanaCubo = new VentanaCubo();
+				new VentanaCubo();
 				
-				System.out.println(cubo.desarmar(20, (byte)0));
-				Cara.imprimirCarasEnConsola(wFace, bFace, rFace, oFace, gFace, yFace);
-				System.out.println();
-				
-				cubo.armar();
-				Cara.imprimirCarasEnConsola(wFace, bFace, rFace, oFace, gFace, yFace);
-				System.out.println();
+//				System.out.println(cubo.desarmar(5, (byte)0));
+//				Cara.imprimirCarasEnConsola(wFace, bFace, rFace, oFace, gFace, yFace);
+//				System.out.println();
+//				
+//				cubo.armar();
+//				Cara.imprimirCarasEnConsola(wFace, bFace, rFace, oFace, gFace, yFace);
+//				System.out.println();
 		
 		
 	}

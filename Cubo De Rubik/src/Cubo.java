@@ -8,19 +8,19 @@ public class Cubo {
 	private Cara c3;
 	private Cara c4;
 	private Cara c5;
-	public Cara [] caras = new Cara[6];
+	public Cara[] caras;
 	public final char [] COLORES = {'w', 'b', 'r', 'o', 'g', 'y'};
 
 
 
 	/**
 	 * crea un cubo y un arreglo que contiene las caras
-	 * @param c0
-	 * @param c1
-	 * @param c2
-	 * @param c3
-	 * @param c4
-	 * @param c5
+	 * @param cara 1
+	 * @param cara 2
+	 * @param cara 3
+	 * @param cara 4
+	 * @param cara 5
+	 * @param cara 6
 	 */
 	public Cubo(Cara c0, Cara c1, Cara c2, Cara c3, Cara c4, Cara c5) {
 		this.c0 = c0;
@@ -29,12 +29,7 @@ public class Cubo {
 		this.c3 = c3;
 		this.c4 = c4;
 		this.c5 = c5;
-		this.caras[0] = c0;
-		this.caras[1] = c1;
-		this.caras[2] = c2;
-		this.caras[3] = c3;
-		this.caras[4] = c4;
-		this.caras[5] = c5;
+		this.caras = new Cara[] {c0, c1, c2,c3,c4,c5};
 	}
 
 	
@@ -661,7 +656,6 @@ public class Cubo {
 			}
 			movimientoAnterior = algoritmo[i];
 			if(i>0) preMovimientoAnterior = algoritmo [i-1];
-			
 		}
 		
 //		se arma el cubo
@@ -902,12 +896,16 @@ public class Cubo {
 		return instruccionesArmar;
 	}
 
-	
-	
-	
-	
-	
-	
+	public void imprimirCubo() {
+//		for(byte i=0; i<6; i++)
+//			caras[i].imprimirCaraEnConsola();
+		c0.imprimirCaraEnConsola();
+		c1.imprimirCaraEnConsola();
+		c2.imprimirCaraEnConsola();
+		c3.imprimirCaraEnConsola();
+		c4.imprimirCaraEnConsola();
+		c5.imprimirCaraEnConsola();
+	}
 	
 	
 }

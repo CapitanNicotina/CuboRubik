@@ -135,8 +135,8 @@ public class Cara {
 	 * @param caraAImprimir
 	 */
 	public void imprimirCaraEnConsola() {
-		for(int i=0; i<3; i++) {
-			for(int e=0; e<3; e++) {
+		for(byte i=0; i<3; i++) {
+			for(byte e=0; e<3; e++) {
 				System.out.print(this.colorCuadrados[i][e]);
 				if(e==2) {
 					System.out.println();
